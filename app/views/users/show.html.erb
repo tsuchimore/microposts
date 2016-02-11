@@ -5,6 +5,7 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
+        <%= @user.age %>
       </h1>
     </section>
   </aside>
@@ -17,8 +18,10 @@
     <% end %>
   </div>
 </div>
+
   <div class="panel-body">
     <p>プロフィールの編集
     (<%= link_to "edit" , edit_user_path(@user) %>)</p>
 
   </div>
+ 
