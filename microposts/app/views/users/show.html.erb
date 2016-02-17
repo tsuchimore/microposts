@@ -17,5 +17,6 @@
     <% end %>
     <span><%= link_to "following_users", followings_user_path(@user) %></span>
     <span><%= link_to "follower_users", followers_user_path(@user) %></span>
+    <span><%= paginate(@users) %></span>
   </div>
 </div>
