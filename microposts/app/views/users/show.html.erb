@@ -15,8 +15,20 @@
         <%= render @microposts %>
       </ol>
     <% end %>
+    
     <span><%= link_to "following_users", followings_user_path(@user) %></span>
     <span><%= link_to "follower_users", followers_user_path(@user) %></span>
-    <span><%= paginate(@users) %></span>
+
+<table>
+  <tr>
+    <td>タイトル</td>
+  </tr>
+  <% @users.each do |v| %>
+  <tr>
+    <td><%= v.name %></td>
+  </tr>
+  <% end %>
+</table>
+<%= paginate(@users) %>
   </div>
 </div>

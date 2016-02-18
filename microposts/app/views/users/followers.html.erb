@@ -1,5 +1,6 @@
 <p>
-<% @users.each do |followers| %>
-<%= followers.name %>さん。
+<% @users.each do |follower| %>
+<%= follower.name %>さん。
+<%= gravatar_for follower %>
 <% end %>
 </p>
