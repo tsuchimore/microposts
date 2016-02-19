@@ -1,7 +1,10 @@
-<p>
+<ul style="list-style:none;">
 <% @users.each do |following| %>
-<%= following.name %>さん。
-<%= gravatar_for following %>
-<span><%= link_to following.name, user_path(following) %></span>
+
+
+    <li class="clearfix"> <!-- clearfix は奇麗に改行するためのおまじない -->
+      <%= link_to (gravatar_for following),  user_path(following)  %>
+      <span><%= link_to following.name, user_path(following) %>さん</span>
+    </li>
 <% end %>
-</p>
+</ul>
