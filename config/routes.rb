@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       get 'followings'
     end
   end
+
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts
   resources :relationships
