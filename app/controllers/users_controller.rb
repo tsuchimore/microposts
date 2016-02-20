@@ -29,10 +29,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @users = @user.follower_users
   end
-  def show
-    @user = User.find(params[:id])
-    @microposts = @user.microposts.order(created_at: :desc)
-    @users = User.page(params[:page]).per(2)
+  
+  def show 
+    @user = User.find(params[:id]) 
+    @microposts = @user.microposts.order(created_at: :desc).page(params[:page]).per(2) 
   end
   
   def new
@@ -56,7 +56,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password,
+    params.require(:user).permit(:name, :email, :age,:password,
                                  :password_confirmation)
   end
 end
