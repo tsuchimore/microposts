@@ -1,7 +1,0 @@
-<p>
-<% @users.each do |following| %>
-<%= following.name %>さん。
-<%= gravatar_for following %>
-<span><%= link_to following.name, user_path(following) %></span>
-<% end %>
-</p>
